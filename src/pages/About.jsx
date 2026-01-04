@@ -1,16 +1,13 @@
 // src/pages/About.jsx
+import "../styles/About.css";
+
 export default function About() {
   return (
-    <section
-      id="about"
-      className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-20"
-    >
-      <div className="max-w-5xl mx-auto text-gray-800">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-blue-600 mb-8">
-          About Senator Hillary Sigei
-        </h2>
+    <section id="about">
+      <div className="container">
+        <h2>About Senator Hillary Sigei</h2>
 
-        <div className="space-y-6 text-justify text-gray-700 leading-relaxed">
+        <div className="content">
           <p>
             Senator Kiprotich Hillary Sigei, widely known as <strong>Wakili Hillary Sigei</strong>, is a distinguished Advocate of the High Court of Kenya and the serving Senator for Bomet County. With over fifteen years of legal practice and public service, he has earned national recognition for his principled leadership, legal excellence, and unwavering commitment to justice and good governance.
           </p>
