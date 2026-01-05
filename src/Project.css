@@ -56,4 +56,9 @@
   .project-content h1 {
     font-size: 2rem;
   }
+
+   .back-btn {
+    padding: 8px 20px;   /* smaller padding */
+    font-size: 0.85rem;  /* slightly smaller text */
+  }
 }
