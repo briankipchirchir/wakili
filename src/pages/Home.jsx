@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "../Home.css";
+import { Link } from "react-router-dom";
+
 
 // Community Impact Images
 import educationImg from "../assets/education.png";
@@ -86,6 +88,9 @@ export default function Home() {
               Sigei has supported access to education for needy and deserving
               students.
             </p>
+             <Link to="/education" className="card-btn">
+    Learn More →
+  </Link>
           </div>
 
           <div className="impact-card">
@@ -97,6 +102,9 @@ export default function Home() {
               Supporting youth enterprises, women-led businesses, and vocational
               skills programs to promote sustainable livelihoods.
             </p>
+             <Link to="/youth" className="card-btn">
+      Learn More →
+  </Link>
           </div>
 
           <div className="impact-card">
@@ -108,6 +116,9 @@ export default function Home() {
               Promoting road safety, financial literacy, and responsible riding
               among boda boda operators across the county.
             </p>
+             <Link to="/bodaboda" className="card-btn">
+      Learn More →
+  </Link>
           </div>
 
           <div className="impact-card">
@@ -119,6 +130,9 @@ export default function Home() {
               Actively involved in tree planting, forest restoration, and climate
               action initiatives in partnership with local communities.
             </p>
+             <Link to="/environment" className="card-btn">
+      Learn More →
+  </Link>
           </div>
 
           <div className="impact-card">
@@ -130,6 +144,9 @@ export default function Home() {
               Patron of youth sports initiatives including the annual Wakili
               Sigei Cup, nurturing talent and promoting unity.
             </p>
+             <Link to="/sports" className="card-btn">
+    Learn More →
+  </Link>
           </div>
 
           <div className="impact-card">
@@ -141,6 +158,9 @@ export default function Home() {
               Provided pro bono legal services and continues to champion justice,
               constitutionalism, and human rights at national and county levels.
             </p>
+             <Link to="/legal-aid" className="card-btn">
+      Learn More →
+  </Link>
           </div>
         </div>
       </section>
