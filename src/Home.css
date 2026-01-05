@@ -160,23 +160,24 @@ body {
     max-width: 90%;
   }
 }
-
 /* ================= COMMUNITY IMPACT ================= */
+
 .impact-section {
   padding: 80px 8%;
   background: #f9fafb;
-  text-align: center;
 }
 
 .section-title {
-  font-size: 2.2rem;
+  text-align: center;
+  font-size: 2.3rem;
   font-weight: 700;
   color: #0f172a;
   margin-bottom: 10px;
 }
 
 .section-subtitle {
-  max-width: 700px;
+  text-align: center;
+  max-width: 800px;
   margin: 0 auto 50px;
   color: #475569;
   font-size: 1.05rem;
@@ -185,32 +186,69 @@ body {
 .impact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+  gap: 30px;
 }
 
+/* CARD */
 .impact-card {
   background: #ffffff;
-  padding: 30px 25px;
-  border-radius: 14px;
-  text-align: left;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .impact-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
 }
 
+/* IMAGE */
+.impact-image {
+  width: 100%;
+  height: 180px;
+  background: #e5e7eb; /* fallback if image missing */
+  overflow: hidden;
+}
+
+.impact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.impact-card:hover .impact-image img {
+  transform: scale(1.08);
+}
+
+/* TEXT */
 .impact-card h3 {
+  padding: 18px 20px 8px;
   font-size: 1.15rem;
-  margin-bottom: 12px;
+  font-weight: 600;
   color: #1e293b;
 }
 
 .impact-card p {
+  padding: 0 20px 22px;
   font-size: 0.95rem;
   color: #475569;
   line-height: 1.6;
 }
 
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .impact-section {
+    padding: 60px 6%;
+  }
+
+  .impact-image {
+    height: 160px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}

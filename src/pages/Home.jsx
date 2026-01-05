@@ -1,6 +1,13 @@
-// src/pages/Home.jsx
 import { useState } from "react";
 import "../Home.css";
+
+// Community Impact Images
+import educationImg from "../assets/education.png";
+import youthImg from "../assets/youth.png";
+import bodaImg from "../assets/bodaImg.png";
+import tree from "../assets/tree.png";
+import sportsImg from "../assets/sportsImg.png";
+
 
 export default function Home() {
   const [readMore, setReadMore] = useState(false);
@@ -70,6 +77,9 @@ export default function Home() {
 
         <div className="impact-grid">
           <div className="impact-card">
+            <div className="impact-image">
+              <img src={educationImg} alt="Education and Scholarships" />
+            </div>
             <h3>🎓 Education & Scholarships</h3>
             <p>
               Through scholarships, bursaries, and mentorship programs, Senator
@@ -79,7 +89,10 @@ export default function Home() {
           </div>
 
           <div className="impact-card">
-            <h3>🚀 Youth & Economic Empowerment</h3>
+            <div className="impact-image">
+              <img src={youthImg} alt="Youth Empowerment" />
+            </div>
+            <h3>Youth & Economic Empowerment</h3>
             <p>
               Supporting youth enterprises, women-led businesses, and vocational
               skills programs to promote sustainable livelihoods.
@@ -87,7 +100,10 @@ export default function Home() {
           </div>
 
           <div className="impact-card">
-            <h3>🚴 Boda Boda RideSmart Initiative</h3>
+            <div className="impact-image">
+              <img src={bodaImg} alt="Boda Boda RideSmart Initiative" />
+            </div>
+            <h3> Boda Boda RideSmart Initiative</h3>
             <p>
               Promoting road safety, financial literacy, and responsible riding
               among boda boda operators across the county.
@@ -95,6 +111,9 @@ export default function Home() {
           </div>
 
           <div className="impact-card">
+            <div className="impact-image">
+              <img src={tree} alt="Environmental Conservation" />
+            </div>
             <h3>🌱 Environmental Conservation</h3>
             <p>
               Actively involved in tree planting, forest restoration, and climate
@@ -103,6 +122,9 @@ export default function Home() {
           </div>
 
           <div className="impact-card">
+            <div className="impact-image">
+              <img src={sportsImg} alt="Sports and Talent Development" />
+            </div>
             <h3>⚽ Sports & Talent Development</h3>
             <p>
               Patron of youth sports initiatives including the annual Wakili
@@ -111,6 +133,9 @@ export default function Home() {
           </div>
 
           <div className="impact-card">
+            <div className="impact-image">
+              
+            </div>
             <h3>⚖️ Legal Aid & Governance</h3>
             <p>
               Provided pro bono legal services and continues to champion justice,
@@ -122,4 +147,3 @@ export default function Home() {
     </section>
   );
 }
-
