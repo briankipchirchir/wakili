@@ -1,27 +1,78 @@
-/* Smooth scroll for anchor links */
-html {
-  scroll-behavior: smooth;
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  padding: 0 40px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* Highlight the active page link */
-.nav-links a.active-link {
-  color: #ffcc00; /* active color */
+/* LOGO */
+.logo a {
+  font-size: 1.3rem;
   font-weight: 700;
-  border-bottom: 2px solid #ffcc00;
-  padding-bottom: 2px;
+  color: #00529b;
+  text-decoration: none;
 }
 
-/* Subtle hover animation for links */
+/* LINKS (DESKTOP) */
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
 .nav-links a {
-  transition: color 0.3s ease, transform 0.2s ease, border-bottom 0.3s ease;
+  color: #1f2933;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  transform: translateY(-2px);
-  color: #ffd633; /* lighter accent on hover */
+  color: #00529b;
 }
 
-/* Mobile adjustments remain same */
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: flex; /* ALWAYS visible */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: #00529b;
+  border-radius: 3px;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .nav-links {
     position: fixed;
@@ -29,18 +80,19 @@ html {
     right: -100%;
     flex-direction: column;
     background: #00529b;
-    width: 60%;
+    width: 65%;
     height: 100vh;
-    padding: 30px 20px;
-    gap: 25px;
-    transition: right 0.3s ease;
+    padding: 40px 25px;
+    gap: 28px;
+    transition: right 0.4s ease;
+  }
+
+  .nav-links a {
+    color: #ffffff;
+    font-size: 1.15rem;
   }
 
   .nav-links.active {
     right: 0;
-  }
-
-  .hamburger {
-    display: flex;
   }
 }

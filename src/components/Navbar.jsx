@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import "../styles/Navbar.css";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
+      {/* Brand / Logo */}
+      <div className="logo">
+        <Link to="/">Wakili Hillary Sigei</Link>
+      </div>
 
+      {/* Links */}
       <div className={`nav-links ${menuOpen ? "active" : ""}`}>
         <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
         <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
@@ -15,13 +21,15 @@ export default function Navbar() {
         <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
       </div>
 
+      {/* Hamburger (visible on ALL screens) */}
       <div
         className={`hamburger ${menuOpen ? "active" : ""}`}
         onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation"
       >
-        <div></div>
-        <div></div>
-        <div></div>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </nav>
   );
