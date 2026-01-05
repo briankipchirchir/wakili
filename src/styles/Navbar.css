@@ -1,114 +1,46 @@
-/* ================= GENERAL ================= */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 15px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
 }
 
-.navbar.scrolled {
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* Logo */
-.logo a {
-  font-size: 1.5rem;
+/* Highlight the active page link */
+.nav-links a.active-link {
+  color: #ffcc00; /* active color */
   font-weight: 700;
-  color: #00529b;
-  text-decoration: none;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 2px;
 }
 
-/* Nav links */
-.nav-links {
-  display: flex;
-  gap: 35px;
-  align-items: center;
-}
-
+/* Subtle hover animation for links */
 .nav-links a {
-  color: #222;
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-  transition: color 0.3s ease, transform 0.2s ease;
+  transition: color 0.3s ease, transform 0.2s ease, border-bottom 0.3s ease;
 }
 
 .nav-links a:hover {
   transform: translateY(-2px);
-  color: #00529b;
+  color: #ffd633; /* lighter accent on hover */
 }
 
-.nav-links a.active-link {
-  color: #0077cc;
-  font-weight: 700;
-  border-bottom: 2px solid #0077cc;
-  padding-bottom: 2px;
-}
-
-/* Hamburger */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 28px;
-  height: 20px;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.hamburger div {
-  height: 3px;
-   background: #ffffff;
-  border-radius: 2px;
-  transition: all 0.4s ease;
-}
-
-.hamburger.active div:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active div:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active div:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* ================= MOBILE ================= */
+/* Mobile adjustments remain same */
 @media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
   .nav-links {
     position: fixed;
-    top: 0;
+    top: 65px;
     right: -100%;
     flex-direction: column;
-    width: 65%;
-    height: 100vh;
     background: #00529b;
-    padding-top: 80px;
-    padding-left: 25px;
+    width: 60%;
+    height: 100vh;
+    padding: 30px 20px;
     gap: 25px;
-    transition: right 0.4s ease;
-  }
-
-  .nav-links a {
-    color: #fff;
-    font-size: 1.2rem;
+    transition: right 0.3s ease;
   }
 
   .nav-links.active {
     right: 0;
+  }
+
+  .hamburger {
+    display: flex;
   }
 }

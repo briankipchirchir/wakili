@@ -1,44 +1,18 @@
-import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
-import "../styles/Navbar.css";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
-
-  const links = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Community", path: "/community" },
-    { name: "Football", path: "/football" },
-    { name: "Contact", path: "/contact" },
-  ];
-
-  // Detect scroll for navbar background
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      <div className="logo">
-        <Link to="/">Wakili Hillary Sigei</Link>
-      </div>
+    <nav className="navbar">
 
       <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-        {links.map((link) => (
-          <Link
-            key={link.path}
-            to={link.path}
-            onClick={() => setMenuOpen(false)}
-            className={location.pathname === link.path ? "active-link" : ""}
-          >
-            {link.name}
-          </Link>
-        ))}
+        <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
+        <Link to="/community" onClick={() => setMenuOpen(false)}>Community</Link>
+        <Link to="/football" onClick={() => setMenuOpen(false)}>Football</Link>
+        <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
       </div>
 
       <div
