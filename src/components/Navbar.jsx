@@ -7,10 +7,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      {/* Brand / Logo */}
-      <div className="logo">
-        <Link to="/">Wakili Hillary Sigei</Link>
-      </div>
+     
 
       {/* Links */}
       <div className={`nav-links ${menuOpen ? "active" : ""}`}>

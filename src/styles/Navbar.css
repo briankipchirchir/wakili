@@ -14,13 +14,6 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* LOGO */
-.logo a {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #00529b;
-  text-decoration: none;
-}
 
 /* LINKS (DESKTOP) */
 .nav-links {
@@ -88,7 +81,7 @@
   }
 
   .nav-links a {
-    color: #ffffff;
+    color: #00529b;
     font-size: 1.15rem;
   }
 
