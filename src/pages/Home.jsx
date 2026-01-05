@@ -4,7 +4,7 @@ import "../Home.css";
 // Community Impact Images
 import educationImg from "../assets/education.png";
 import youthImg from "../assets/youth.png";
-import bodaImg from "../assets/bodaImg.png";
+import bodaImg from "../assets/boda.png";
 import tree from "../assets/tree.png";
 import sportsImg from "../assets/sportsImg.png";
 
