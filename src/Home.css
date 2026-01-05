@@ -286,10 +286,11 @@ body {
   flex-direction: column;
 }
 
-/* Mobile-friendly */
 @media (max-width: 768px) {
   .card-btn {
-    padding: 10px 15px;
-    font-size: 1rem;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-width: 1px;
   }
 }
+
